@@ -1,0 +1,21 @@
+clear all
+close all
+clc
+w-logspace(-3,2,2000);
+t = 0:0.01:100;
+G=tf(1, conv([5 1],[5 1]))
+%
+% figure(1)
+% bode(G,w)
+% grid
+T2 = 0.5;
+nGK1 = [T2 1];
+dGK1 = [25 10 1];
+GK1 = tf(nGK1, dGK1);
+% figure (2)
+% bode (GK1, w);
+% grid
+T1=20;
+NGK = [(T1*T2) (T1+T2) 1];
+dGK = [25 10 1 0];
+GK = tf(nGK, dGK);
