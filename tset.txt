@@ -19,3 +19,18 @@ T1=20;
 NGK = [(T1*T2) (T1+T2) 1];
 dGK = [25 10 1 0];
 GK = tf(nGK, dGK);
+% figure (3)
+% bode (GK, w);
+% grid
+KO = 0.79;
+NGK
+KO
+[(T1*T2) (T1+T2)
+GK = tf(nGK, dGK);
+margin (GK);
+FTBF = feedback (GK, 1);
+figure(4)
+step(FTBF, t);
+line([0 100], [0.95 0.95])
+line([0 100], [1.05 1.05])
+grid
