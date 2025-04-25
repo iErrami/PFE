@@ -1,1 +1,5 @@
-« « clear x=zeros(100,1); for i=41:60,x(i)=2;end; y=zeros(100,1); for i=41:60,y(i)=3;end; N=100; a=-N/2:N/2-1; b=-N:N-2; subplot(2,2,1);plot(a,x);axis([-50,50,0,2.5]);grid; title('premier signal');xlabel('t');ylabel('x(t)'); subplot(2,2,2);plot(a,y);axis([-50,50,0,3.5]);grid; title('deuxième signal');xlabel('t');ylabel('y(t)'); subplot(2,2,4);plot(b,conv(x,y));grid; axis([-60 60 0 140]);title('convolution');xlabel('t'); 
+À quoi est due la symétrie observée ?
+La symétrie du spectre est due au fait que le signal temporel est réel (et ici aussi symétrique), ce qui implique une symétrie conjuguée dans la TFD.
+
+5. Quelle est la largeur du lobe principal ?
+La largeur du lobe principal dépend de la longueur de la fenêtre. Pour une fenêtre rectangulaire de taille , le lobe principal du spectre de magnitude s'étend sur environ  en fréquence normalisée.
